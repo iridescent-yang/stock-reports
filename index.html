@@ -2,217 +2,61 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-<title>🔍 中瓷电子（003031）快速诊断</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A股投资研究报告 · GitHub Pages</title>
 <style>
-:root {
-  --bg: #0d1117;
-  --bg-card: #161b22;
-  --bg-hover: #1c2333;
-  --border: #30363d;
-  --text: #c9d1d9;
-  --text-muted: #8b949e;
-  --accent: #58a6ff;
-  --red: #ff6b6b;
-  --gold: #f0c040;
-  --green: #3fb950;
-  --purple: #bc8cff;
-  --orange: #f0883e;
-}
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-  background: var(--bg); color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-  line-height: 1.75; padding: 0; -webkit-text-size-adjust: 100%;
-}
-.container { max-width: 820px; margin: 0 auto; padding: 24px 16px 60px; }
-h1 {
-  font-size: 1.5rem; font-weight: 700; text-align: center; margin-bottom: 4px;
-  background: linear-gradient(135deg, var(--accent), var(--purple));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-}
-.subtitle { text-align: center; color: var(--text-muted); font-size: .85rem; margin-bottom: 20px; }
-.badge-row { text-align: center; margin-bottom: 24px; }
-.badge {
-  display: inline-block; background: var(--bg-card); border: 1px solid var(--border);
-  border-radius: 20px; padding: 3px 12px; margin: 2px; font-size: .78rem; color: var(--text-muted);
-}
-h2 {
-  font-size: 1.15rem; font-weight: 600; color: var(--accent);
-  margin: 32px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border);
-}
-h3 { font-size: 1rem; color: var(--text); margin: 20px 0 10px; }
-table {
-  width: 100%; border-collapse: collapse; margin: 12px 0; font-size: .85rem;
-}
-thead th {
-  background: var(--bg-hover); color: var(--accent); padding: 8px 10px;
-  text-align: left; font-weight: 600; border-bottom: 2px solid var(--border);
-}
-tbody td { padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
-tbody tr:hover { background: var(--bg-hover); }
-td:first-child { font-weight: 600; white-space: nowrap; }
-.verdict {
-  background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px;
-  padding: 14px 16px; margin: 12px 0; font-size: .9rem; line-height: 1.7;
-}
-.verdict.accent { border-left: 3px solid var(--accent); }
-.verdict.red { border-left: 3px solid var(--red); }
-.verdict.gold { border-left: 3px solid var(--gold); }
-.verdict.green { border-left: 3px solid var(--green); }
-.verdict.orange { border-left: 3px solid var(--orange); }
-blockquote {
-  border-left: 3px solid var(--accent); padding: 6px 14px; margin: 10px 0;
-  color: var(--text-muted); font-size: .88rem; background: var(--bg-card); border-radius: 0 6px 6px 0;
-}
-.stars { color: var(--gold); }
-.tier {
-  display: inline-block; padding: 2px 8px; border-radius: 4px;
-  font-size: .75rem; font-weight: 700; text-align: center;
-}
-.tier-s { background: rgba(255,107,107,.15); color: var(--red); }
-.em { color: var(--red); font-weight: 600; }
-.ac { color: var(--accent); font-weight: 600; }
-.gr { color: var(--green); font-weight: 600; }
-.go { color: var(--gold); font-weight: 600; }
-.lifecycle {
-  background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px;
-  padding: 14px 16px; margin: 12px 0; font-family: "Fira Code", "Consolas", monospace;
-  font-size: .8rem; line-height: 1.9; white-space: pre; overflow-x: auto;
-}
-.chart-label { font-size: .78rem; color: var(--text-muted); text-align: center; }
-@media (max-width: 480px) {
-  .container { padding: 12px 10px 40px; }
-  h1 { font-size: 1.25rem; }
-  table { font-size: .75rem; }
-  thead th, tbody td { padding: 6px 7px; }
-}
+:root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #c9d1d9; --accent: #58a6ff; --red: #ff7b72; --green: #3fb950; --muted: #8b949e; }
+@media (prefers-color-scheme: light) { :root { --bg: #fff; --card: #f6f8fa; --text: #24292f; --muted: #656d76; } }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 20px; max-width: 800px; margin: 0 auto; }
+h1 { font-size: 1.8em; margin-bottom: 8px; color: var(--accent); }
+.subtitle { color: var(--muted); font-size: 0.9em; margin-bottom: 30px; }
+.section { margin-bottom: 30px; }
+.section h2 { font-size: 1.3em; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.report-list { list-style: none; }
+.report-list li { padding: 10px 14px; margin-bottom: 6px; background: var(--card); border-radius: 6px; border: 1px solid var(--border); transition: background 0.2s; }
+.report-list li:hover { background: #21262d; }
+.report-list a { color: var(--accent); text-decoration: none; font-weight: 500; }
+.report-list .meta { color: var(--muted); font-size: 0.85em; margin-left: 8px; }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.75em; font-weight: 600; margin-right: 6px; }
+.tag-s { background: #ff7b7233; color: #ff7b72; }
+.tag-a { background: #ffa65733; color: #ffa657; }
+.tag-b { background: #58a6ff33; color: #58a6ff; }
+.tag-watch { background: #8b949933; color: #8b9499; }
+footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85em; text-align: center; }
 </style>
 </head>
 <body>
-<div class="container">
+<h1>📊 A股投资研究报告</h1>
+<p class="subtitle">个股诊断 + 每日复盘 · 永久存档 · GitHub Pages</p>
 
-<h1>🔍 中瓷电子（003031）快速诊断</h1>
-<p class="subtitle">个股快诊 · 五步模板 | 2026年6月14日</p>
-<div class="badge-row">
-  <span class="badge">📡 AI光通信</span>
-  <span class="badge">🧪 电子陶瓷</span>
-  <span class="badge">🏆 全球双寡头</span>
-  <span class="badge">🔥 S级龙头</span>
+<div class="section">
+<h2>📋 个股快诊报告</h2>
+<ul class="report-list">
+<li>🏷️ <span class="tag tag-s">S级</span> <a href="stocks/中瓷电子_003031.html">中瓷电子 003031</a><span class="meta">光通信陶瓷封装 · 全球双寡头</span></li>
+<li>🏷️ <span class="tag tag-s">S级</span> <a href="stocks/天孚通信_300394.html">天孚通信 300394</a><span class="meta">光器件 · 1.6T独供英伟达</span></li>
+<li>🏷️ <span class="tag tag-s">S级</span> <a href="stocks/长电科技_600584.html">长电科技 600584</a><span class="meta">先进封装 · 国家队</span></li>
+<li>🏷️ <span class="tag tag-s">S级</span> <a href="stocks/沪电股份_002463.html">沪电股份 002463</a><span class="meta">高端PCB · AI服务器骨架</span></li>
+<li>🏷️ <span class="tag tag-a">A级</span> <a href="stocks/兆易创新_603986.html">兆易创新 603986</a><span class="meta">存储+MCU 双龙头</span></li>
+<li>🏷️ <span class="tag tag-a">A级</span> <a href="stocks/江丰电子_300666.html">江丰电子 300666</a><span class="meta">溅射靶材 · 3nm突破</span></li>
+<li>🏷️ <span class="tag tag-a">A级</span> <a href="stocks/国瓷材料_300285.html">国瓷材料 300285</a><span class="meta">陶瓷粉体 · 国内80%+</span></li>
+<li>🏷️ <span class="tag tag-a">A级</span> <a href="stocks/生益科技_600183.html">生益科技 600183</a><span class="meta">覆铜板 · 全球第二</span></li>
+<li>🏷️ <span class="tag tag-a">A级</span> <a href="stocks/风华高科_000636.html">风华高科 000636</a><span class="meta">MLCC国内双第一</span></li>
+<li>🏷️ <span class="tag tag-a">A级</span> <a href="stocks/德福科技_301511.html">德福科技 301511</a><span class="meta">HVLP5铜箔第一</span></li>
+<li>... 更多报告持续更新中</li>
+</ul>
 </div>
 
-<!-- ====== 一 ====== -->
-<h2>一、产业链纯度检验</h2>
-<table>
-<thead><tr><th>维度</th><th>数据</th><th style="text-align:center">判定</th></tr></thead>
-<tbody>
-<tr><td>光通信陶瓷封装业务占比</td><td>电子陶瓷外壳为主营，光通信外壳为核心产品线</td><td style="text-align:center">🏆</td></tr>
-<tr><td>产业链位置</td><td><strong>最上游</strong> → 光模块封装外壳（所有光模块的物理外壳）</td><td style="text-align:center">—</td></tr>
-<tr><td>与"AI光通信"的关联</td><td><strong>直接</strong>——800G/1.6T光模块必须用它做的陶瓷外壳</td><td style="text-align:center">🏆</td></tr>
-<tr><td>ROE</td><td>~10-12%</td><td style="text-align:center">⚠️</td></tr>
-<tr><td>净利润增速</td><td>2025年快速增长</td><td style="text-align:center">✅</td></tr>
-<tr><td><strong>总体判定</strong></td><td>—</td><td style="text-align:center"><span class="tier tier-s">🏆 全球双寡头</span></td></tr>
-</tbody>
-</table>
-
-<blockquote>AI光通信的<strong class="em">"物理咽喉"</strong>——全球只有中瓷电子和日本京瓷两家能做800G以上光模块的陶瓷封装外壳。中瓷在1.6T产品上甚至领先京瓷。</blockquote>
-
-<!-- ====== 二 ====== -->
-<h2>二、🌳 产业认知地图</h2>
-
-<h3>它到底是干嘛的？</h3>
-<blockquote>
-光模块里面有一块芯片在发光、收光，它需要一个极其精密的外壳来保护，同时还要让光能准确进出。这个外壳的精度要求是微米级的——<strong>一根头发丝的 1/50</strong>。<br><br>
-<strong>全球只有两家公司能做 800G 以上的：一家是日本的京瓷，另一家就是中瓷电子。</strong>
-</blockquote>
-
-<h3>应用场景演进</h3>
-<table>
-<thead><tr><th>时代</th><th>谁在用</th><th>需求特征</th></tr></thead>
-<tbody>
-<tr><td>过去（100G/400G）</td><td>电信设备、数据中心</td><td>普通封装外壳，竞争相对多</td></tr>
-<tr><td><strong>现在（800G）</strong></td><td>AI算力中心光互联</td><td>中瓷+京瓷双寡头，进入壁垒极高</td></tr>
-<tr><td>未来（1.6T+）</td><td>下一代AI光互联</td><td><strong class="gr">中瓷率先量产1.6T外壳，领先京瓷</strong></td></tr>
-</tbody>
-</table>
-
-<h3>关键产业变动</h3>
-<div class="verdict accent">
-<strong>AI算力中心内部互联从铜线→光纤切换</strong><br>
-光模块需求暴增 × 每个光模块都需要陶瓷外壳 × 800G以上只有两家能做 = <strong class="em">供需极度紧张</strong>
+<div class="section">
+<h2>📅 每日复盘报告</h2>
+<ul class="report-list">
+<li>暂无日报数据，待自动化系统上线后自动更新。</li>
+</ul>
 </div>
 
-<h3>产业生命周期</h3>
-<div class="lifecycle">📈 当前位置：
-萌芽 ──→ 成长 ──→【繁荣早期】──→ 成熟 ──→ 衰退
-                  ↑
-              我们现在在这
-
-驱动力：AI光模块从800G→1.6T升级，每个都需要中瓷的外壳
-风险点：CPO硅光集成可能减少分立光模块数量，长期看是个威胁</div>
-
-<h3>直觉验证</h3>
-<div class="verdict green">
-• AI越热 → 数据中心越多 → 光模块越多 → 中瓷电子生意越好<br>
-• 英伟达推出更高带宽GPU → 必须用更快的光模块 → <strong>必须用中瓷的陶瓷外壳</strong><br>
-• 你能在日常生活中感受到：用ChatGPT/豆包的人越多 → 数据中心越多 → 需求越刚性
-</div>
-
-<!-- ====== 三 ====== -->
-<h2>三、龙头对标 — 你应该买谁</h2>
-<table>
-<thead><tr><th style="text-align:center">排名</th><th>公司</th><th>核心优势</th></tr></thead>
-<tbody>
-<tr><td style="text-align:center">🥇</td><td><strong class="ac">中瓷电子</strong></td><td>国内唯一800G+陶瓷外壳，1.6T率先量产，全球＞90%份额</td></tr>
-<tr><td style="text-align:center">🥈</td><td>京瓷（日本）</td><td>另一家供应商，但1.6T落后于中瓷</td></tr>
-</tbody>
-</table>
-
-<blockquote><strong>全球就两家，中瓷在下一代产品上还领先。</strong>这个赛道没有第三个值得讨论的对手。</blockquote>
-
-<!-- ====== 四 ====== -->
-<h2>四、估值温度计 + 建仓档位</h2>
-<table>
-<thead><tr><th>估值方式</th><th style="text-align:center">判定</th></tr></thead>
-<tbody>
-<tr><td><strong>总判断</strong></td><td style="text-align:center"><span class="go">🟡 AI光通信核心卡位股</span></td></tr>
-</tbody>
-</table>
-
-<table>
-<thead><tr><th style="text-align:center">档位</th><th style="text-align:center">仓位</th><th>逻辑</th></tr></thead>
-<tbody>
-<tr><td style="text-align:center"><span class="gr">🟢 保守</span></td><td style="text-align:center">≤10%</td><td>回调至技术支撑位</td></tr>
-<tr><td style="text-align:center"><span class="go">🟡 合理</span></td><td style="text-align:center">≤5%</td><td>当前估值区间</td></tr>
-<tr><td style="text-align:center"><span class="em">🔴 激进</span></td><td style="text-align:center">≤3%</td><td>趋势突破时</td></tr>
-</tbody>
-</table>
-
-<!-- ====== 五 ====== -->
-<h2>五、操作建议 + 持续跟踪清单</h2>
-
-<h3>🎯 操作建议</h3>
-<table>
-<thead><tr><th>当前动作</th><th>建议</th></tr></thead>
-<tbody>
-<tr><td><strong>持有</strong></td><td>✅ 核心持仓，AI光通信物理瓶颈，护城河极深</td></tr>
-<tr><td><strong>买入</strong></td><td>回调至60日均线附近可考虑分批建仓</td></tr>
-</tbody>
-</table>
-
-<h3>📌 持续跟踪指标</h3>
-<div class="verdict accent">
-<strong>1. 1.6T量产进度</strong> — 何时大规模出货，ASP是否保持<br>
-<strong>2. 京瓷竞争动向</strong> — 日本京瓷是否追赶1.6T，抢份额<br>
-<strong>3. 每季出货量</strong> — 验证AI光模块需求是否持续增长<br>
-<strong>4. CPO硅光集成进展</strong> — 长期技术替代风险<br>
-<strong>5. 光模块客户拓展</strong> — 是否进入更多光模块厂商供应链
-</div>
-
-<div class="verdict red" style="margin-top:32px; text-align:center;">
-<strong>⚠️ 免责声明</strong><br>以上分析基于公开信息，所有排序为研究优先级排序，不为任何投资决策负责。最终决策权在洋哥哥手中。
-</div>
-
-</div>
+<footer>
+<p>由梅凝自动生成 · <a href="https://github.com/iridescent-yang/stock-reports" style="color:var(--accent)">GitHub仓库</a></p>
+<p>⚠️ 以上分析基于公开信息，不构成投资建议。最终决策权在洋哥哥手中。</p>
+</footer>
 </body>
 </html>
