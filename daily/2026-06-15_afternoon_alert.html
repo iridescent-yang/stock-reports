@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A股投资报告</title>
+<style>
+:root { --bg:#0d1117; --card:#161b22; --border:#30363d; --text:#c9d1d9; --accent:#58a6ff; --red:#ff7b72; --green:#3fb950; --orange:#ffa657; --muted:#8b949e; }
+@media (prefers-color-scheme: light) { :root { --bg:#fff; --card:#f6f8fa; --text:#24292f; --muted:#656d76; } }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg); color:var(--text); line-height:1.6; padding:20px; max-width:800px; margin:0 auto; }
+h1 { font-size:1.6em; margin-bottom:12px; color:var(--accent); border-bottom:1px solid var(--border); padding-bottom:8px; }
+h2 { font-size:1.25em; margin:24px 0 10px; color:#e6edf3; }
+h3 { font-size:1.1em; margin:18px 0 8px; }
+p { margin:8px 0; }
+table { width:100%; border-collapse:collapse; margin:12px 0; font-size:0.9em; }
+th, td { padding:8px 12px; text-align:left; border:1px solid var(--border); }
+th { background:var(--card); font-weight:600; }
+tr:nth-child(even) { background:#161b2210; }
+blockquote { border-left:3px solid var(--accent); padding:8px 16px; margin:12px 0; background:var(--card); border-radius:0 6px 6px 0; color:var(--muted); }
+hr { border:none; border-top:1px solid var(--border); margin:20px 0; }
+code { background:var(--card); padding:2px 6px; border-radius:4px; font-size:0.85em; }
+pre { background:var(--card); padding:12px; border-radius:6px; overflow-x:auto; margin:12px 0; border:1px solid var(--border); }
+ul, ol { padding-left:24px; margin:8px 0; }
+li { margin:4px 0; }
+a { color:var(--accent); }
+strong { color:#e6edf3; }
+footer { margin-top:40px; padding-top:20px; border-top:1px solid var(--border); text-align:center; color:var(--muted); font-size:0.85em; }
+</style>
+</head>
+<body>
+<h1>⚠️ A股尾盘预警简报</h1>
+<br>
+<p><strong>日期</strong>：2026年6月15日（周一）  </p>
+<p><strong>时点</strong>：14:30 尾盘预警  </p>
+<p><strong>状态</strong>：🟢 温和偏多 | 炸板需关注</p>
+<br>
+<hr>
+<br>
+<h2>一、指数全景</h2>
+<br>
+<table>
+<tr>
+<th>指数</th>
+<th>收盘价</th>
+<th>涨跌幅</th>
+<th>日内高</th>
+<th>日内低</th>
+<th>判断</th>
+</tr>
+<tr>
+<td>上证指数</td>
+<td>4096.47</td>
+<td>**+1.41%**</td>
+<td>4097.17</td>
+<td>4051.07</td>
+<td>🟢 稳步上行</td>
+</tr>
+<tr>
+<td>深证成指</td>
+<td>15530.22</td>
+<td>**+3.79%**</td>
+<td>—</td>
+<td>—</td>
+<td>🟢 强势</td>
+</tr>
+<tr>
+<td>创业板指</td>
+<td>4032.23</td>
+<td>**+5.27%**</td>
+<td>—</td>
+<td>—</td>
+<td>🔥 领涨</td>
+</tr>
+</table>
+<br>
+<blockquote>三大指数协同上行，创指涨超5%领跑，科技成长风格主导。</blockquote>
+<br>
+<hr>
+<br>
+<h2>二、市场情绪温度计</h2>
+<br>
+<table>
+<tr>
+<th>指标</th>
+<th>数值</th>
+<th>信号</th>
+</tr>
+<tr>
+<td>上涨家数</td>
+<td>**3,548**</td>
+<td>🟢</td>
+</tr>
+<tr>
+<td>下跌家数</td>
+<td>**1,530**</td>
+<td>—</td>
+</tr>
+<tr>
+<td>涨跌比</td>
+<td>**2.32 : 1**</td>
+<td>🟢 偏多</td>
+</tr>
+<tr>
+<td>市场温度</td>
+<td>**64°**</td>
+<td>🟡 温和</td>
+</tr>
+<tr>
+<td>涨停封住</td>
+<td>**147** 家</td>
+<td>🟢</td>
+</tr>
+<tr>
+<td>跌停封住</td>
+<td>**4** 家</td>
+<td>🟢</td>
+</tr>
+<tr>
+<td>封板率</td>
+<td>**79.03%**（186触板/39炸板）</td>
+<td>🟡</td>
+</tr>
+<tr>
+<td>昨涨停今均涨</td>
+<td>**+0.02%**</td>
+<td>🟡 打板溢价弱</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<h2>三、涨停深度画像</h2>
+<br>
+<h3>连板梯队</h3>
+<br>
+<p>| 板数 | 数量 | 代表个股 |</p>
+<p>| <strong>3板</strong> | 4 | [深桑达A](https://stock.quicktiny.cn/quote/000032)（半导体洁净室+AI算力）、[金钼股份](https://stock.quicktiny.cn/quote/601958)（钼价上涨）、[盛龙股份](https://stock.quicktiny.cn/quote/001257)（钼替代钨） |</p>
+<table>
+<tr>
+<th>板数</th>
+<th>数量</th>
+<th>代表个股</th>
+</tr>
+<tr>
+<td>**3板**</td>
+<td>4</td>
+<td>[深桑达A](https://stock.quicktiny.cn/quote/000032)（半导体洁净室+AI算力）、[金钼股份](https://stock.quicktiny.cn/quote/601958)（钼价上涨）、[盛龙股份](https://stock.quicktiny.cn/quote/001257)（钼替代钨）</td>
+</tr>
+<tr>
+<td>**1板**</td>
+<td>135</td>
+<td>主要集中于芯片/PCB/新能源汽车</td>
+</tr>
+</table>
+<br>
+<li>**最高连板**：3板（仅4只）</li>
+<li>**晋级率**：1→2 **0%** / 2→3 **0%** / 3→4 **0%**</li>
+<li>**⚠️ 连板高度偏低，高位晋级全面哑火，追高情绪谨慎**</li>
+<br>
+<hr>
+<br>
+<h2>四、核心主线（涨停集中度）</h2>
+<br>
+<p>| 排名 | 板块 | 涨停数 | 涨幅 | 风向标 |</p>
+<p>| 1 | 🔥 <strong>PCB概念</strong> | 31 | <strong>+7.60%</strong> | 东山精密、诺德股份 |</p>
+<p>| 3 | 🔥 <strong>5G</strong> | 35 | <strong>+4.92%</strong> | 东山精密、意华股份 |</p>
+<p>| 5 | 🟢 新能源汽车 | 50 | +3.37% | 东山精密、华锋股份 |</p>
+<p>| 7 | 🟢 储能 | 32 | +2.78% | 永冠新材、华锋股份 |</p>
+<table>
+<tr>
+<th>排名</th>
+<th>板块</th>
+<th>涨停数</th>
+<th>涨幅</th>
+<th>风向标</th>
+</tr>
+<tr>
+<td>1</td>
+<td>🔥 **PCB概念**</td>
+<td>31</td>
+<td>**+7.60%**</td>
+<td>东山精密、诺德股份</td>
+</tr>
+<tr>
+<td>3</td>
+<td>🔥 **5G**</td>
+<td>35</td>
+<td>**+4.92%**</td>
+<td>东山精密、意华股份</td>
+</tr>
+<tr>
+<td>5</td>
+<td>🟢 新能源汽车</td>
+<td>50</td>
+<td>+3.37%</td>
+<td>东山精密、华锋股份</td>
+</tr>
+<tr>
+<td>7</td>
+<td>🟢 储能</td>
+<td>32</td>
+<td>+2.78%</td>
+<td>永冠新材、华锋股份</td>
+</tr>
+</table>
+<br>
+<blockquote>**主线解读**：AI算力链（PCB/芯片/5G/光通信）全线爆发，PCB板块涨7.6%领跑全市场。东山精密横跨PCB/5G/芯片/华为/数据中心五大板块，是当日**绝对核心中军**。</blockquote>
+<br>
+<hr>
+<br>
+<h2>五、概念排名（按涨停数）</h2>
+<br>
+<p>| 排名 | 概念 | 涨幅 | 涨停数 |</p>
+<p>| 1 | 芯片产业链 | +4.66% | 43 |</p>
+<p>| 3 | PCB | <strong>+8.95%</strong> | 32 |</p>
+<p>| 5 | 华为产业链 | +3.59% | 29 |</p>
+<p>| 7 | 机器人概念 | +2.87% | 26 |</p>
+<p>| 9 | 新能源汽车 | +2.81% | 25 |</p>
+<table>
+<tr>
+<th>排名</th>
+<th>概念</th>
+<th>涨幅</th>
+<th>涨停数</th>
+</tr>
+<tr>
+<td>1</td>
+<td>芯片产业链</td>
+<td>+4.66%</td>
+<td>43</td>
+</tr>
+<tr>
+<td>3</td>
+<td>PCB</td>
+<td>**+8.95%**</td>
+<td>32</td>
+</tr>
+<tr>
+<td>5</td>
+<td>华为产业链</td>
+<td>+3.59%</td>
+<td>29</td>
+</tr>
+<tr>
+<td>7</td>
+<td>机器人概念</td>
+<td>+2.87%</td>
+<td>26</td>
+</tr>
+<tr>
+<td>9</td>
+<td>新能源汽车</td>
+<td>+2.81%</td>
+<td>25</td>
+</tr>
+</table>
+<br>
+<hr>
+<br>
+<h2>六、行业板块轮动信号</h2>
+<br>
+<h3>🟢 持续强势</h3>
+<table>
+<tr>
+<th>板块</th>
+<th>今日涨幅</th>
+<th>阶段涨幅</th>
+</tr>
+<tr>
+<td>有色·钨</td>
+<td>+6.11%</td>
+<td>+18.32%</td>
+</tr>
+<tr>
+<td>铜箔/覆铜板</td>
+<td>**+10.41%**</td>
+<td>+127.70%</td>
+</tr>
+<tr>
+<td>复合集流体</td>
+<td>**+8.60%**</td>
+<td>+63.69%</td>
+</tr>
+</table>
+<br>
+<h3>🟡 低位启动</h3>
+<table>
+<tr>
+<th>板块</th>
+<th>今日涨幅</th>
+<th>阶段涨幅</th>
+</tr>
+<tr>
+<td>黄金概念</td>
+<td>+3.77%</td>
+<td>-4.40%</td>
+</tr>
+<tr>
+<td>有色·镁</td>
+<td>+3.18%</td>
+<td>-8.03%</td>
+</tr>
+<tr>
+<td>PVC</td>
+<td>+2.19%</td>
+<td>-8.38%</td>
+</tr>
+</table>
+<br>
+<h3>🔴 高位走弱</h3>
+<table>
+<tr>
+<th>板块</th>
+<th>今日涨幅</th>
+<th>近期变化</th>
+</tr>
+<tr>
+<td>人脸识别</td>
+<td>+2.03%</td>
+<td>-4.86%</td>
+</tr>
+<tr>
+<td>减速器</td>
+<td>+2.51%</td>
+<td>-3.39%</td>
+</tr>
+<tr>
+<td>智元机器人</td>
+<td>+3.52%</td>
+<td>-3.36%</td>
+</tr>
+</table>
+<br>
+<blockquote>⚠️ **铜箔/覆铜板阶段涨127%**，需警惕高位兑现风险。机器人相关板块高位走弱，资金在从机器人向AI算力硬件切换。</blockquote>
+<br>
+<hr>
+<br>
+<h2>七、炸板风险池（午后38只炸板）</h2>
+<br>
+<table>
+<tr>
+<th>代码</th>
+<th>名称</th>
+<th>当前涨幅</th>
+<th>炸板次数</th>
+</tr>
+<tr>
+<td>300005</td>
+<td>探路者</td>
+<td>+19.97%</td>
+<td>62次</td>
+</tr>
+<tr>
+<td>688432</td>
+<td>有研硅</td>
+<td>+19.62%</td>
+<td>1次</td>
+</tr>
+<tr>
+<td>301458</td>
+<td>钧崴电子</td>
+<td>+17.80%</td>
+<td>4次</td>
+</tr>
+<tr>
+<td>002138</td>
+<td>顺络电子</td>
+<td>+9.12%</td>
+<td>6次</td>
+</tr>
+<tr>
+<td>603435</td>
+<td>嘉德利</td>
+<td>+9.36%</td>
+<td>1次</td>
+</tr>
+<tr>
+<td>002810</td>
+<td>山东赫达</td>
+<td>+9.24%</td>
+<td>1次</td>
+</tr>
+<tr>
+<td>600641</td>
+<td>先导基电</td>
+<td>+9.02%</td>
+<td>5次</td>
+</tr>
+<tr>
+<td>002768</td>
+<td>国恩股份</td>
+<td>+8.38%</td>
+<td>2次</td>
+</tr>
+<tr>
+<td>002522</td>
+<td>浙江众成</td>
+<td>+8.18%</td>
+<td>2次</td>
+</tr>
+<tr>
+<td>002655</td>
+<td>共达电声</td>
+<td>+8.07%</td>
+<td>1次</td>
+</tr>
+</table>
+<br>
+<blockquote>⚠️ **探路者炸板62次**极度异常，存在主力出货嫌疑。整体38只炸板数量不低，尾盘需警惕炸板扩散。</blockquote>
+<br>
+<hr>
+<br>
+<h2>八、北向与主力资金</h2>
+<br>
+<table>
+<tr>
+<th>指标</th>
+<th>数据</th>
+<th>日期</th>
+</tr>
+<tr>
+<td>主力净流入</td>
+<td>**+106.64亿**</td>
+<td>6/12</td>
+</tr>
+<tr>
+<td>超大单净流入</td>
+<td>+136.33亿</td>
+<td>6/12</td>
+</tr>
+<tr>
+<td>大单净流入</td>
+<td>-29.68亿</td>
+<td>6/12</td>
+</tr>
+<tr>
+<td>中单净流出</td>
+<td>-304.45亿</td>
+<td>6/12</td>
+</tr>
+<tr>
+<td>小单净流入</td>
+<td>+197.80亿</td>
+<td>6/12</td>
+</tr>
+</table>
+<br>
+<blockquote>⚠️ 今日资金流数据尚未更新（悟道回退至6/12）。从6/12看，超大单净流入136亿支撑大盘，但今日需盘中观察是否延续。</blockquote>
+<br>
+<hr>
+<br>
+<h2>九、异动监测</h2>
+<br>
+<p><strong>未检测到全市场级别异动信号。</strong> 市场运行平稳，无突发性大幅波动个股/板块。</p>
+<br>
+<hr>
+<br>
+<h2>十、尾盘持仓建议</h2>
+<br>
+<h3>🟢 可以持有/关注</h3>
+<li>**AI算力链**（PCB/芯片/光通信/5G）：当日最强主线，涨停密度高，可持续跟踪</li>
+<li>**铜箔/覆铜板**：趋势最强板块，但阶段涨幅127%需设好止盈</li>
+<li>**消费电子**：+5.01%放量上涨，关注板块轮动延续性</li>
+<br>
+<h3>🟡 谨慎/减仓</h3>
+<li>**机器人/减速器/人脸识别**：高位走弱，资金明显流出</li>
+<li>**追高连板**：晋级率0%，连板生态极差，打板性价比低</li>
+<li>**探路者相关**：62次炸板，典型出货信号</li>
+<br>
+<h3>🔴 尾盘需警惕</h3>
+<p>1. <strong>炸板扩散</strong>：38只炸板已不低，尾盘14:57竞价若再出现批量炸板，将打击次日溢价</p>
+<p>2. <strong>量能不足</strong>：涨停虽多但封板率79%偏低，大量首板股次日可能直接低开</p>
+<p>3. <strong>北向态度不明</strong>：今日资金数据未出，若北向午后转为净流出，需减仓应对</p>
+<br>
+<hr>
+<br>
+<h2>十一、一句话定调</h2>
+<br>
+<blockquote>**🔵 AI算力全线爆发带动市场普涨，但连板高度仅3板、炸板38只、晋级率归零——典型"宽而浅"行情，尾盘守仓为主，不宜追高。**</blockquote>
+<br>
+<hr>
+<br>
+<p>*报告生成时间：2026-06-15 14:35 | 数据源：悟道A股MCP + westockdata*</p>
+<br>
+<footer>
+<p>由梅凝自动生成 · <a href="https://github.com/iridescent-yang/stock-reports" style="color:var(--accent)">GitHub仓库</a></p>
+<p>⚠️ 以上分析基于公开信息，不构成投资建议。</p>
+</footer>
+</body>
+</html>
